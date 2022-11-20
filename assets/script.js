@@ -9,6 +9,7 @@ const saveButton = $(".saveBtn");
 const hourTask = $("id");
 const userText = $(".hour-task");
 
+
 //Set current time in header when application opens
 
 $(document).ready(function () {
@@ -16,17 +17,23 @@ $(document).ready(function () {
     $("#currentDay").text(today.format("dddd MMM. Do YYYY, h:mm a"));
 
     var hours = today.hours();
-   
+//    console.log(hours);
 });
+
+//Reset button will clear the form and make it blank
+
+
+
 
 //Set variables for time and color changes
 
 var parent = $(this).parents(".row");
-var timeId = parseInt(parent.statusbar("id"));
+var timeId = parseInt(parent.attr("id")); //fixed bug here
 var currentHour = parseInt(moment().format("H"));
 
 //Set variable for current hour
 let index = 0;
+console.log(timeBlock);
 
 //Past/present/future functions
 
@@ -37,9 +44,9 @@ timeBlock.each(function () {
     var currentHour = parseInt(moment().format("H"));
     console.log(timeId);
 
-    if (timeId < currentHour) {
+    if(timeId < currentHour) {
         $(this).addClass("past");
-    } else if (timeId === currentHour) {
+    } else if(timeId === currentHour) {
         $(this).removeClass("past");
         $(this).addClass("present");
     } else {
@@ -56,7 +63,7 @@ timeBlock.each(function () {
 //Set on.click function to tell it when and where to store the information
 $(".saveBtn").on("click", function() {
     
-    var userText = $(this).sibling(".time-block").val();
+    var userText = $(this).siblings(".time-block").val();
 
     var hourTask = $(this).parents(".row").attr("id");
 
