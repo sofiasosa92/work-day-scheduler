@@ -1,6 +1,6 @@
 //Displaying current date
 
-var todayDate = moment().format('dddd, MMM do YYYY');
+var todayDate = moment().format('dddd, MMM Do YYYY');
 $('#currentDay').html(todayDate);
 
 
@@ -27,7 +27,7 @@ function timeTracker() {
     $(".time-block").each(function () {
         var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
-    //Check the time and add teh classes for background indicators
+    //Check the time and add the classes for background indicators
 
         if (blockTime < timeNow) {
             $(this).removeClass("future");
