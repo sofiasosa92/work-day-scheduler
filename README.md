@@ -8,5 +8,5 @@ Link to deployed application:
 https://sofiasosa92.github.io/work-day-scheduler/
 
 Deployed application demo:
-https://user-images.githubusercontent.com/115671262/203869279-29199be6-30ec-4513-b9b5-999fdf4116ae.mov
+https://user-images.githubusercontent.com/115671262/203869383-9bdc5376-cf1d-4f4f-bad5-248565f77a75.mov
 
