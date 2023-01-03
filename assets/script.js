@@ -24,7 +24,7 @@ $(document).ready(function () {
 
 var parent = $(this).parents(".box");
 var timeId = parseInt(parent.attr("id")); //fixed bug here
-var currentHour = parseInt(moment().format("H"));
+var currentHour = parseInt(moment().format("Hr"));
 
 //Set variable for current hour
 let index = 0;
