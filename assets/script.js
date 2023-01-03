@@ -20,9 +20,6 @@ $(document).ready(function () {
 //    console.log(hours);
 });
 
-
-
-
 // variables for time color changes
 
 var parent = $(this).parents(".box");
@@ -63,5 +60,5 @@ timeBlock.each(function () {
     var hourTask = $(this).parents(".row").attr("id");
     localStorage.setItem(hourTask, text);
 
-    console.log("+++ Get Item from Local Storage: ", localStorage.getItem(hourTask))
+    console.log("Get Item from Local Storage: ", localStorage.getItem(hourTask))
 })
