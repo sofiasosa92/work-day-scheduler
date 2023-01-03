@@ -1,16 +1,16 @@
 //Declaring elements/classes
-const rows = $(".row");
+const box = $(".box");
 const hours = $(".hour");
 const past = $(".past");
 const present = $(".present");
 const future = $(".future");
 const timeBlock = $(".time-block");
-const saveButton = $(".saveBtn");
+const saveButton = $(".saveButton");
 const hourTask = $("id");
-const userText = $(".hour-task");
+const text= $(".toDo");
 
 
-//Set current time in header when application opens
+// current time in header
 
 $(document).ready(function () {
     var today = moment();
@@ -20,14 +20,12 @@ $(document).ready(function () {
 //    console.log(hours);
 });
 
-//Reset button will clear the form and make it blank
 
 
 
+// variables for time color changes
 
-//Set variables for time and color changes
-
-var parent = $(this).parents(".row");
+var parent = $(this).parents(".box");
 var timeId = parseInt(parent.attr("id")); //fixed bug here
 var currentHour = parseInt(moment().format("H"));
 
@@ -41,7 +39,7 @@ timeBlock.each(function () {
 
     var parent = $(this).parents(".row");
     var timeId = parseInt(parent.attr("id"));
-    var currentHour = parseInt(moment().format("H"));
+    var currentHour = parseInt(moment().format("Hr"));
     console.log(timeId);
 
     if(timeId < currentHour) {
@@ -60,14 +58,11 @@ timeBlock.each(function () {
     
 })
 
-//Set on.click function to tell it when and where to store the information
-$(".saveBtn").on("click", function() {
-    
-    var userText = $(this).siblings(".time-block").val();
-
+//on.click function
+    $(".saveButton").on("click", function() {
+    var text = $(this).siblings(".time-block").val();
     var hourTask = $(this).parents(".row").attr("id");
-
-    localStorage.setItem(hourTask, userText);
+    localStorage.setItem(hourTask, text);
 
     console.log("+++ Get Item from Local Storage: ", localStorage.getItem(hourTask))
 })
