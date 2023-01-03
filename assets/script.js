@@ -54,8 +54,7 @@ timeBlock.each(function () {
 
         $(this).val(localStorage.getItem(parent.attr("id")));
     }
-    $(this).val(localStorage.getItem(parent.attr("id"))); //???????
-    
+
 })
 
 //on.click function
