@@ -1,4 +1,4 @@
-//Declaring elements/classes
+//Declaring elements/classes to be used to create time blocks
 const box = $(".box");
 const hours = $(".hour");
 const past = $(".past");
@@ -10,7 +10,7 @@ const hourTask = $("id");
 const text= $(".toDo");
 
 
-// current time in header
+// to display current time in teh header
 
 $(document).ready(function () {
     var today = moment();
@@ -26,11 +26,11 @@ var parent = $(this).parents(".box");
 var timeId = parseInt(parent.attr("id")); //fixed bug here
 var currentHour = parseInt(moment().format("Hr"));
 
-//Set variable for current hour
+//Set variable for current hour display
 let index = 0;
 console.log(timeBlock);
 
-//Past/present/future functions
+//fucntions to display Past/present/future
 
 timeBlock.each(function () {
 
@@ -54,7 +54,7 @@ timeBlock.each(function () {
 
 })
 
-//on.click function
+//on.click function to save task
     $(".saveButton").on("click", function() {
     var text = $(this).siblings(".time-block").val();
     var hourTask = $(this).parents(".row").attr("id");
